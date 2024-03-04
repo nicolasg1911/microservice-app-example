@@ -3,16 +3,16 @@
 <h2>beginnig</h2>
     <p>I started by reading the readme of each microservice to start building the dockerfile for launching one by one</p>
 <h2>Users API</h2>
-    <p>by reading the microservices readme I build the dockerfile like this:
-       FROM openjdk:8-jdk
-       WORKDIR /usr/src/app
-       COPY . .
-       RUN ./mvnw clean install
-       ENV SPRING_ZIPKIN_BASE_URL=http://zipkin:9411 
-       ENV JWT_SECRET=PRFT
-       ENV SERVER_PORT=8083
-       EXPOSE $SERVER_PORT
-       CMD ["java", "-jar", "target/users-api-0.0.1-SNAPSHOT.jar"]
+    <p>by reading the microservices readme I build the dockerfile like this:<br>
+       FROM openjdk:8-jdk<br>
+       WORKDIR /usr/src/app<br>
+       COPY . .<br>
+       RUN ./mvnw clean install<br>
+       ENV SPRING_ZIPKIN_BASE_URL=http://zipkin:9411 <br>
+       ENV JWT_SECRET=PRFT<br>
+       ENV SERVER_PORT=8083<br>
+       EXPOSE $SERVER_PORT<br>
+       CMD ["java", "-jar", "target/users-api-0.0.1-SNAPSHOT.jar"]<br>
        Getting the library then copying the files in the workdir and initializing Environment variables such as the zipkin URL and the port and finally executing 
     </p>
 
